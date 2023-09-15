@@ -89,3 +89,16 @@ h2 {
     height: 500px;
     position: relative;
 }
+
+@media only screen and (max-width: 1000px) {
+    .grid {
+        grid-template-columns: auto;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    body {
+        transform: scale(0.7);
+
+    }
+  }
