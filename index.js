@@ -28,16 +28,20 @@ const hover = function() {
 const changeLights = function() {
     
     for (let light of lightsOnStarship) {
-        console.log('here')
-        // .fill may be a problem
         light.style.fill = colorlist[randomIntFromInterval(0, 2)]
     }
 }
 
-console.log(lightsOnStarship)
+const changeLightsUFO = function() {
+    
+    for (let light of lightsOnStarship) {
+        light.style.color = colorlist[randomIntFromInterval(0, 2)]
+    }
+}
 
 let i = setInterval(hover, 20);
 let o = setInterval(changeLights, 20); 
+let f = setInterval(changeLightsUFO, 200); 
 
 function randomIntFromInterval(min, max) { // min and max included 
     return Math.floor(Math.random() * (max - min + 1) + min)
